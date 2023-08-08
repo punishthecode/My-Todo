@@ -40,7 +40,7 @@ const TodoList: React.FC<TodoListProps> = ({
   };
 
   return (
-    <div>
+    <Box width="40%">
       <List>
         {todos.map((todo) => (
           <ListItem key={todo.id} disablePadding>
@@ -67,11 +67,13 @@ const TodoList: React.FC<TodoListProps> = ({
           value={newTodoText}
           onChange={(e) => setNewTodoText(e.target.value)}
         />
-        <IconButton onClick={handleAddTodo}>
-          <AddIcon />
-        </IconButton>
+        <Box paddingLeft="20px">
+          <IconButton onClick={handleAddTodo}>
+            <AddIcon />
+          </IconButton>
+        </Box>
       </Box>
-    </div>
+    </Box>
   );
 };
 

@@ -22,7 +22,7 @@ const App: React.FC = () => {
     <Container sx={customContainerStyles}>
       <Navbar />
       {isAuthenticated ? (
-        <Box display="flex" justifyContent="center" mt={4}>
+        <Box marginLeft="10%" mt={4}>
           <Todos />
         </Box>
       ) : (
