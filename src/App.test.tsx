@@ -2,8 +2,8 @@ import { describe, it } from "vitest";
 import App from "./App";
 import { render } from "./utils/test-utils";
 
-describe("Test of test", () => {
+describe("App", () => {
   it("renders the App component", () => {
-    render(<App greeting="Hello World" />);
+    render(<App />);
   });
 });
