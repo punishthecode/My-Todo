@@ -3,6 +3,8 @@ import Box from "@mui/material/Box";
 import Navbar from "./components/Navbar";
 import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
+import LoginNotice from "./components/LoginNotice";
+import TodoList from "./components/TodoList";
 
 const customContainerStyles = {
   padding: "0px",
@@ -21,15 +23,11 @@ const App: React.FC = () => {
       <Navbar />
       {isAuthenticated ? (
         <Box display="flex" justifyContent="center" mt={4}>
-          <Typography variant="h4" gutterBottom>
-            This is my application
-          </Typography>
+          <TodoList />
         </Box>
       ) : (
         <Box display="flex" justifyContent="center" mt={4}>
-          <Typography variant="h4" gutterBottom>
-            Login to view the application
-          </Typography>
+          <LoginNotice />
         </Box>
       )}
     </Container>
