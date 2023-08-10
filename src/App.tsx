@@ -22,12 +22,16 @@ const App: React.FC = () => {
   return (
     <Container sx={customContainerStyles}>
       <Navbar />
-      {isAuthenticated && (
+      {isAuthenticated ? (
         <Suspense fallback={<Spinner />}>
           <Box marginLeft="10%" mt={4}>
             <Todos />
           </Box>
         </Suspense>
+      ) : (
+        <Box display="flex" justifyContent="center" mt={4}>
+          <LoginNotice />
+        </Box>
       )}
     </Container>
   );
