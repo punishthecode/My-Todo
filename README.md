@@ -1,6 +1,6 @@
 # My Todo
 
-![My Todo App Screenshot](./screenshot.png)
+![My Todo App Screenshot](./snapshot.png)
 
 This is a simple Todo App built using React, TypeScript, and Auth0 for authentication. It uses Vitest and Vitest UI for unit testing. The app allows users to create, manage, and track their tasks.
 
