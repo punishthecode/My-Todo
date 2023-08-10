@@ -57,7 +57,6 @@ yarn install
 ## Steps
 
 - Create an Auth0 account and set up an application.
-- Create an Auth0 account and set up an application.
 - Create an auth0-config.ts file in the project root and add the following:
 
 ```auth0-config.ts
