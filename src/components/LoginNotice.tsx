@@ -4,7 +4,7 @@ const LoginNotice: React.FC = () => {
   return (
     <Box>
       <Typography variant="h4" gutterBottom>
-        Login to view the application
+        Login to view your todos!
       </Typography>
     </Box>
   );
