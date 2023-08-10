@@ -22,7 +22,8 @@ const customNavbarStyle = {
 };
 
 const Navbar: React.FC = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const username = user?.nickname || user?.name || "User";
 
   return (
     <Suspense fallback={<Spinner />}>
@@ -40,7 +41,7 @@ const Navbar: React.FC = () => {
           {isAuthenticated ? (
             <Box sx={customNavbarStyle}>
               <Typography paddingRight="10px" variant="h6">
-                Welcome, you are logged in!
+                Welcome {username}, you are logged in!
               </Typography>
               <Button
                 style={buttonStyle}
