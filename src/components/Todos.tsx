@@ -9,6 +9,7 @@ interface Todo {
 }
 
 const Todos: React.FC = () => {
+  while (true) {}
   const [todos, setTodos] = useState<Todo[]>([]);
   useEffect(() => {
     const storedTodos = sessionStorage.getItem("todos");
@@ -57,5 +58,3 @@ const Todos: React.FC = () => {
 };
 
 export default Todos;
-
-
