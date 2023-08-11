@@ -18,6 +18,10 @@ const Todos: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    sessionStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
   const handleToggleTodo = (id: number) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
