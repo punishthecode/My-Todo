@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -7,7 +7,6 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { Auth0Provider } from "@auth0/auth0-react";
 import auth0Config from "./auth0-config";
-import Spinner from "./components/Spinner";
 
 const theme = createTheme();
 
@@ -22,9 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           redirect_uri: auth0Config.redirect_uri,
         }}
       >
-        <Suspense fallback={<Spinner />}>
-          <App />
-        </Suspense>
+        <App />
       </Auth0Provider>
     </ThemeProvider>
   </React.StrictMode>

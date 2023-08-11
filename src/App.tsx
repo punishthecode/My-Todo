@@ -2,9 +2,10 @@ import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import Navbar from "./components/Navbar";
 import { useAuth0 } from "@auth0/auth0-react";
-import React from "react";
+import React, { Suspense } from "react";
 import LoginNotice from "./components/LoginNotice";
 import Todos from "./components/Todos";
+import Spinner from "./components/Spinner";
 
 const customContainerStyles = {
   padding: "0px",
@@ -22,9 +23,11 @@ const App: React.FC = () => {
     <Container sx={customContainerStyles}>
       <Navbar />
       {isAuthenticated ? (
-        <Box marginLeft="10%" mt={4}>
-          <Todos />
-        </Box>
+        <Suspense fallback={<Spinner />}>
+          <Box marginLeft="10%" mt={4}>
+            <Todos />
+          </Box>
+        </Suspense>
       ) : (
         <Box display="flex" justifyContent="center" mt={4}>
           <LoginNotice />
