@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
-import "../App.css";
 
 interface Todo {
   id: number;
@@ -60,7 +59,7 @@ const TodoList: React.FC<TodoListProps> = ({
             />
             <ListItemText
               primary={todo.text}
-              className={todo.completed ? ".completed" : ""}
+              style={todo.completed ? { textDecoration: "line-through" } : {}}
             />
             <IconButton onClick={() => onDelete(todo.id)}>
               <DeleteIcon />
