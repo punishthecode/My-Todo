@@ -2,10 +2,9 @@ import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import Navbar from "./components/Navbar";
 import { useAuth0 } from "@auth0/auth0-react";
-import React, { Suspense } from "react";
+import React from "react";
 import LoginNotice from "./components/LoginNotice";
 import Todos from "./components/Todos";
-// import Spinner from "./components/Spinner";
 
 const customContainerStyles = {
   padding: "0px",
