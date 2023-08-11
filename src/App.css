@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.completed {
+  text-decoration: line-through;
+  animation: blink 1s infinite alternate;
+  color: red;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
