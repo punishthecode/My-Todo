@@ -24,6 +24,10 @@ const Todos: React.FC = () => {
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
+    sessionStorage.setItem(
+      "todos",
+      JSON.stringify(todos.filter((todo) => todo.completed != false))
+    );
   };
 
   const handleDeleteTodo = (id: number) => {
