@@ -8,7 +8,7 @@ const DateComponent: React.FC = () => {
   const month = currentDate.getMonth() + 1;
   const day = currentDate.getDate();
 
-  const formattedDate = `${year}-${month < 10 ? "0" : ""}${month}-${
+  const formattedDate = `${year} - ${month < 10 ? "0" : ""}${month} - ${
     day < 10 ? "0" : ""
   }${day}`;
   return (
