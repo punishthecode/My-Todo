@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import React, { Suspense } from "react";
 import LoginNotice from "./components/LoginNotice";
 import Todos from "./components/Todos";
-import Spinner from "./components/Spinner";
+// import Spinner from "./components/Spinner";
 
 const customContainerStyles = {
   padding: "0px",
@@ -23,11 +23,9 @@ const App: React.FC = () => {
     <Container sx={customContainerStyles}>
       <Navbar />
       {isAuthenticated ? (
-        <Suspense fallback={<Spinner />}>
-          <Box marginLeft="10%" mt={4}>
-            <Todos />
-          </Box>
-        </Suspense>
+        <Box marginLeft="10%" mt={4}>
+          <Todos />
+        </Box>
       ) : (
         <Box display="flex" justifyContent="center" mt={4}>
           <LoginNotice />

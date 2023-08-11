@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 import { Box, Typography } from "@mui/material";
+import DateComponent from "./DateComponent";
 
 interface Todo {
   id: number;
@@ -46,6 +47,7 @@ const Todos: React.FC = () => {
   return (
     <Box>
       <Typography variant="h4">Todo App</Typography>
+      <DateComponent />
       <TodoList
         todos={todos}
         onToggle={handleToggleTodo}
