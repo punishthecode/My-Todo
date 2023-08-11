@@ -39,6 +39,13 @@ const TodoList: React.FC<TodoListProps> = ({
     }
   };
 
+  const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleAddTodo();
+    }
+  };
+
   return (
     <Box width="40%">
       <List>
@@ -66,6 +73,7 @@ const TodoList: React.FC<TodoListProps> = ({
           variant="outlined"
           value={newTodoText}
           onChange={(e) => setNewTodoText(e.target.value)}
+          onKeyDown={handleEnter}
         />
         <Box paddingLeft="20px">
           <IconButton onClick={handleAddTodo}>
