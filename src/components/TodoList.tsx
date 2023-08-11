@@ -74,6 +74,7 @@ const TodoList: React.FC<TodoListProps> = ({
           value={newTodoText}
           onChange={(e) => setNewTodoText(e.target.value)}
           onKeyDown={handleEnter}
+          required={true}
         />
         <Box paddingLeft="20px">
           <IconButton onClick={handleAddTodo}>
