@@ -22,7 +22,7 @@ Check out the live demo of the app deployed on Netlify: [My Todo App Live Demo](
 - Auth0 for authentication
 - Yarn for package management
 - Vitest for unit testing
-- Vitest --ui for unit testing
+- Vitest --ui for code coverage and testing report
 - Netlify for deployment
 - Material-UI for UI components
 
@@ -32,7 +32,7 @@ Check out the live demo of the app deployed on Netlify: [My Todo App Live Demo](
 
 ```bash
 
-git clone https://github.com/your-username/todo-app.git
+git clone https://github.com/punishthecode/todo-app.git
 
 ```
 
@@ -44,7 +44,7 @@ cd todo-app
 
 ```
 
-3. Navigate to the project directory:
+3. Install the required packages:
 
 ```bash
 
