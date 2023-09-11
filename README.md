@@ -32,7 +32,7 @@ Check out the live demo of the app deployed on Netlify: [My Todo App Live Demo](
 
 ```bash
 
-git clone [https://github.com/punishthecode/todo-app.git](https://github.com/punishthecode/My-Todo.git)
+git clone https://github.com/punishthecode/My-Todo.git
 
 ```
 
